@@ -1,0 +1,9 @@
+version: '3'
+services:
+  cobol:
+    build: .
+    container_name: cobol-practice
+    tty: true
+    volumes:
+      - .:/code
+    working_dir: /code
