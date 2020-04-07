@@ -3,7 +3,7 @@
 ## Commands
 
 ```
-docker build . && docker images
+docker-compose build && docker-compose up -d
 docker exec -it cobol-practice /bin/bash
 ```
 
