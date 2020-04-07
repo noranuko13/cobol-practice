@@ -10,4 +10,5 @@ docker exec -it cobol-practice /bin/bash
 ```
 cobc -x helloworld.cob -o bin/helloworld
 ./bin/helloworld
+cobc -x syntax.cob -o bin/syntax && ./bin/syntax
 ```
