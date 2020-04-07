@@ -28,6 +28,15 @@
        *       VALUE 0 初期値設定
        01 CNT PIC 9(3) VALUE 0.
 
+       * 独立・集団・基本項目
+       01 DOG.
+           03 REGI-NUM     PIC 9(6)    VALUE 123456.
+           03 NAME         PIC  N(30)  VALUE "ぽち".
+           03 BIRTHDAY.
+               05 YEAR      PIC 9999  VALUE 2020.
+               05 MONTH     PIC 99    VALUE 04.
+               05 DT        PIC 99    VALUE 07.
+
 
        *** 手続き部
        PROCEDURE       DIVISION.
@@ -39,5 +48,9 @@
                ADD 1 TO CNT
                DISPLAY "COUNT = " CNT
            END-PERFORM
+
+       *   * 集団項目の表示
+           DISPLAY DOG
+           DISPLAY DT IN DOG
 
            STOP   RUN.
