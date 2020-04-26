@@ -58,6 +58,8 @@
        01 STV PIC 9(8).
        01 STR PIC 9(8).
 
+       01 ANSER PIC 9(3) VALUE 0.
+
       * 独立・集団・基本項目
        01 DOG.
            03 REGI-NUM     PIC 9(6)    VALUE 123456.
@@ -139,5 +141,12 @@
       *    ALL
            MOVE ALL "X" TO ALL-VAL.
            DISPLAY ALL-VAL.
+
+      ***  計算処理
+           DISPLAY "--- 計算処理 ---".
+           COMPUTE ANSER = 300 + 200
+           DISPLAY ANSER
+           COMPUTE ANSER = 400 - 150
+           DISPLAY ANSER
 
            STOP   RUN.
