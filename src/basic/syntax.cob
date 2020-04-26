@@ -61,6 +61,14 @@
                05 MONTH     PIC 99    VALUE 04.
                05 DT        PIC 99    VALUE 07.
 
+      * 表意定数（最小値・最高値）
+       01  LV  PIC X(5).
+       01  LVS PIC X(5).
+       01  HV  PIC X(5).
+       01  HVS PIC X(5).
+
+      * 表意定数（ALL）
+       01 ALL-VAL PIC X(5).
 
       *** 手続き部
        PROCEDURE       DIVISION.
@@ -76,5 +84,34 @@
       *    集団項目の表示
            DISPLAY DOG
            DISPLAY DT IN DOG
+
+      ***  表意定数
+      *      表記方法が複数ある場合は、文脈に合わせて書けるだけで同じもの
+           DISPLAY "--- 表意定数 ---".
+
+      *    0
+           DISPLAY ZERO.
+           DISPLAY ZEROS.
+           DISPLAY ZEROES.
+
+      *    スペース
+           DISPLAY SPACE.
+           DISPLAY SPACES.
+
+      *    ダブルクオーテーション
+           DISPLAY QUOTE.
+           DISPLAY QUOTES.
+
+      *    最小値・最高値
+      *      表示不可
+      *      計算時の比較対象に利用する
+           MOVE LOW-VALUE   TO LV.
+           MOVE LOW-VALUES  TO LVS.
+           MOVE HIGH-VALUES TO HV.
+           MOVE HIGH-VALUES TO HVS.
+
+      *    ALL
+           MOVE ALL "X" TO ALL-VAL.
+           DISPLAY ALL-VAL.
 
            STOP   RUN.
