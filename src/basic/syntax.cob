@@ -80,14 +80,26 @@
 
       *** 手続き部
        PROCEDURE       DIVISION.
+
+      ** 段落・手続き名（GO TO）
+      *    実行したい段落を指定する
+       GO TO F.
+
+       A.
       *    画面に文字列を表示する
            DISPLAY "Coding Style & Syntax".
 
+           GO TO XYZ.
+
+       B.
       *    部分参照
            DISPLAY "--- 部分参照 ---".
            DISPLAY UPPERCASE.
            DISPLAY UPPERCASE (6:13).
 
+           GO TO XYZ.
+
+       C.
       *    ループ・繰り返し処理
            DISPLAY "--- ループ・繰り返し処理 ---".
            MOVE 0 TO CNT
@@ -102,6 +114,9 @@
                DISPLAY "UNTIL: " CNT
            END-PERFORM
 
+           GO TO XYZ.
+
+       D.
       *    条件分岐
            DISPLAY "--- 条件分岐 ---".
            ACCEPT SYSTEM-TIME FROM TIME.
@@ -115,11 +130,17 @@
                    DISPLAY "Even number"
            END-IF
 
+           GO TO XYZ.
+
+       E.
       *    集団項目の表示
            DISPLAY "--- 集団項目の表示 ---".
            DISPLAY DOG
            DISPLAY DT IN DOG
 
+           GO TO XYZ.
+
+       F.
       ***  表意定数
       *      表記方法が複数ある場合は、文脈に合わせて書けるだけで同じもの
            DISPLAY "--- 表意定数 ---".
@@ -149,6 +170,9 @@
            MOVE ALL "X" TO ALL-VAL.
            DISPLAY ALL-VAL.
 
+           GO TO XYZ.
+
+       G.
       ***  計算処理
            DISPLAY "--- 計算処理 ---".
            COMPUTE ANSER = 300 + 200
@@ -156,4 +180,8 @@
            COMPUTE ANSER = 400 - 150
            DISPLAY ANSER
 
+           GO TO XYZ.
+
+       XYZ.
+           DISPLAY "XYZ".
            STOP   RUN.
