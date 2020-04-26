@@ -76,12 +76,14 @@
            DISPLAY "Coding Style & Syntax".
 
       *    ループ・繰り返し処理
+           DISPLAY "--- ループ・繰り返し処理 ---".
            PERFORM 10 TIMES
                ADD 1 TO CNT
                DISPLAY "COUNT = " CNT
            END-PERFORM
 
       *    集団項目の表示
+           DISPLAY "--- 集団項目の表示 ---".
            DISPLAY DOG
            DISPLAY DT IN DOG
 
