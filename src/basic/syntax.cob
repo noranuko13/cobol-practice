@@ -64,16 +64,16 @@
 
       *** 手続き部
        PROCEDURE       DIVISION.
-      *    * 画面に文字列を表示する
+      *    画面に文字列を表示する
            DISPLAY "Coding Style & Syntax".
 
-      *    * ループ・繰り返し処理
+      *    ループ・繰り返し処理
            PERFORM 10 TIMES
                ADD 1 TO CNT
                DISPLAY "COUNT = " CNT
            END-PERFORM
 
-      *    * 集団項目の表示
+      *    集団項目の表示
            DISPLAY DOG
            DISPLAY DT IN DOG
 
