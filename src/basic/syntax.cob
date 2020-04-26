@@ -87,21 +87,21 @@
 
        A.
       *    画面に文字列を表示する
-           DISPLAY "Coding Style & Syntax".
+           DISPLAY "Coding Style & Syntax"
 
            GO TO XYZ.
 
        B.
       *    部分参照
-           DISPLAY "--- 部分参照 ---".
-           DISPLAY UPPERCASE.
-           DISPLAY UPPERCASE (6:13).
+           DISPLAY "--- 部分参照 ---"
+           DISPLAY UPPERCASE
+           DISPLAY UPPERCASE (6:13)
 
            GO TO XYZ.
 
        C.
       *    ループ・繰り返し処理
-           DISPLAY "--- ループ・繰り返し処理 ---".
+           DISPLAY "--- ループ・繰り返し処理 ---"
            MOVE 0 TO CNT
            PERFORM 10 TIMES
                ADD 1 TO CNT
@@ -118,11 +118,11 @@
 
        D.
       *    条件分岐
-           DISPLAY "--- 条件分岐 ---".
+           DISPLAY "--- 条件分岐 ---"
            ACCEPT SYSTEM-TIME FROM TIME.
            DIVIDE 2 INTO SYSTEM-TIME GIVING STV REMAINDER STR.
            DISPLAY SYSTEM-TIME
-           DISPLAY STV "..." STR
+           DISPLAY STV ".." STR
            IF STR = 1
                THEN
                    DISPLAY "Odd number"
@@ -134,7 +134,7 @@
 
        E.
       *    集団項目の表示
-           DISPLAY "--- 集団項目の表示 ---".
+           DISPLAY "--- 集団項目の表示 ---"
            DISPLAY DOG
            DISPLAY DT IN DOG
 
@@ -143,20 +143,20 @@
        F.
       ***  表意定数
       *      表記方法が複数ある場合は、文脈に合わせて書けるだけで同じもの
-           DISPLAY "--- 表意定数 ---".
+           DISPLAY "--- 表意定数 ---"
 
       *    0
-           DISPLAY ZERO.
-           DISPLAY ZEROS.
-           DISPLAY ZEROES.
+           DISPLAY ZERO
+           DISPLAY ZEROS
+           DISPLAY ZEROES
 
       *    スペース
-           DISPLAY SPACE.
-           DISPLAY SPACES.
+           DISPLAY SPACE
+           DISPLAY SPACES
 
       *    ダブルクオーテーション
-           DISPLAY QUOTE.
-           DISPLAY QUOTES.
+           DISPLAY QUOTE
+           DISPLAY QUOTES
 
       *    最小値・最高値
       *      表示不可
@@ -168,13 +168,13 @@
 
       *    ALL
            MOVE ALL "X" TO ALL-VAL.
-           DISPLAY ALL-VAL.
+           DISPLAY ALL-VAL
 
            GO TO XYZ.
 
        G.
       ***  計算処理
-           DISPLAY "--- 計算処理 ---".
+           DISPLAY "--- 計算処理 ---"
            COMPUTE ANSER = 300 + 200
            DISPLAY ANSER
            COMPUTE ANSER = 400 - 150
@@ -183,5 +183,5 @@
            GO TO XYZ.
 
        XYZ.
-           DISPLAY "XYZ".
+           DISPLAY "XYZ"
            STOP   RUN.
