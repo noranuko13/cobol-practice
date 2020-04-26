@@ -90,9 +90,16 @@
 
       *    ループ・繰り返し処理
            DISPLAY "--- ループ・繰り返し処理 ---".
+           MOVE 0 TO CNT
            PERFORM 10 TIMES
                ADD 1 TO CNT
                DISPLAY "COUNT = " CNT
+           END-PERFORM
+
+           MOVE 0 TO CNT
+           PERFORM UNTIL 2 < CNT
+               ADD 1 TO CNT
+               DISPLAY "UNTIL: " CNT
            END-PERFORM
 
       *    条件分岐
