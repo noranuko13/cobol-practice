@@ -52,6 +52,8 @@
       *       VALUE 0 初期値設定
        01 CNT PIC 9(3) VALUE 0.
 
+       01 UPPERCASE PIC X(26) VALUE "ABCDEFGHIJKLMNOPQRSTUVWXYZ".
+
       * 独立・集団・基本項目
        01 DOG.
            03 REGI-NUM     PIC 9(6)    VALUE 123456.
@@ -74,6 +76,11 @@
        PROCEDURE       DIVISION.
       *    画面に文字列を表示する
            DISPLAY "Coding Style & Syntax".
+
+      *    部分参照
+           DISPLAY "--- 部分参照 ---".
+           DISPLAY UPPERCASE.
+           DISPLAY UPPERCASE (6:13).
 
       *    ループ・繰り返し処理
            DISPLAY "--- ループ・繰り返し処理 ---".
