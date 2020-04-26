@@ -54,6 +54,10 @@
 
        01 UPPERCASE PIC X(26) VALUE "ABCDEFGHIJKLMNOPQRSTUVWXYZ".
 
+       01 SYSTEM-TIME PIC 9(8).
+       01 STV PIC 9(8).
+       01 STR PIC 9(8).
+
       * 独立・集団・基本項目
        01 DOG.
            03 REGI-NUM     PIC 9(6)    VALUE 123456.
@@ -88,6 +92,19 @@
                ADD 1 TO CNT
                DISPLAY "COUNT = " CNT
            END-PERFORM
+
+      *    条件分岐
+           DISPLAY "--- 条件分岐 ---".
+           ACCEPT SYSTEM-TIME FROM TIME.
+           DIVIDE 2 INTO SYSTEM-TIME GIVING STV REMAINDER STR.
+           DISPLAY SYSTEM-TIME
+           DISPLAY STV "..." STR
+           IF STR = 1
+               THEN
+                   DISPLAY "Odd number"
+               ELSE
+                   DISPLAY "Even number"
+           END-IF
 
       *    集団項目の表示
            DISPLAY "--- 集団項目の表示 ---".
